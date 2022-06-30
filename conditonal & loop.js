@@ -39,21 +39,27 @@ for (var y=0; y<=20; y++) {
 // Write a JavaScript conditional statement to find the largest of five numbers in the
 // given array.
 // Let num = [-2, 4,-5, 6,0]
-let num = [-2, 4, -5, 6, 0];
-num2= num.sort()
-largest= num2.pop()
-console.log(largest)
-
-
+let num = [-2, 4, -5, 6, 0]
+var largest = num[0];
+for( var a = 0; a<num.length; a++){
+        if(num[a]>largest){
+                largest = num[a];
+        }
+}
+console.log(largest);
 // Using conditional statements, write a JavaScript program to find the largest of the
 // following two numbers: 10 & 40
-let number= [10,40];
-num= number.sort()
-large=num.pop()
-console.log(large)
+let numbers= [10,40];
+var biggest= numbers[0];
+for(var t=0; t>numbers.length; t++){
+        if (numbers[t]>biggest){
+                biggest=numbers[t];
+        }
+}
+console.log(biggest);
 
 
-// Write a JavaScript program to find leap years from 2000 to 2022
+// // Write a JavaScript program to find leap years from 2000 to 2022
 function leap_year_range(first_year, last_year){
 var year_range = [];
         for (var i = first_year; i <= last_year; i++)
@@ -77,7 +83,7 @@ function test_LeapYear(year) {
                 return year;
         } else {
                 return false;
-        }
+        }x
 }
 
 console.log(leap_year_range(2000,2022));
